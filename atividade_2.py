@@ -155,6 +155,13 @@ if tree.is_most_deep_node(check):
 else:
     print(f"O valor {check} NÃO está no nível mais profundo da árvore.")
 
+dot = tree.visualize()
+dot.render('Arvore_binaria', format='png', view=True)
+
+newNode = int(input("Adicione um número novo a árvore: "))
+tree.insert(newNode)
+
 # Visualizar árvore final
 dot = tree.visualize()
 dot.render('Arvore_binaria', format='png', view=True)
+
